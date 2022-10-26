@@ -1,0 +1,26 @@
+<h1>Hello from Rails</h1>
+<p>
+It is now: <%= Time.now %>
+</p>
+
+<p>
+It is now desde el Controlador: <%= @time %>
+</p>
+
+<p>
+2+2=  <%= 2+2 %>
+</p>
+
+<% if false %>
+    <p>
+    3+3 = <%= 3+3 %>
+    </p>
+<% end %>
+
+<p>Say <a href="/say/goodbye">Good Bye</a></p>
+
+<p>
+<%= say_goodbye_path %>
+<br/>
+Digo <%= link_to 'Goodbye', say_goodbye_path %>
+</p>
