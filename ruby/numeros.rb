@@ -23,4 +23,4 @@ puts 'Hola ' + nombre
 puts "Hola #{nombre}"
 
 puts 'Insertando comilla simple a través de la pleca invertida'
-puts 'Comilla simple '
+puts 'Comilla simple \' para verificar'
