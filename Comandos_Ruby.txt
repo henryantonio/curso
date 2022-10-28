@@ -50,4 +50,43 @@ Verificar versión de Rails: rails -v
 Para cambiar el motor de BD de sqlite3 (predeterminado) a PostgreSQL.
 Para ver las opciones para cambiar la configuración: rails new --help
 Crear nuevo proyecto llamado depot con PostgreSQL: rails new depot --database=postgresql
+Usar docker: https://hub.docker.com y buscar la imagen de postgresql
+Ver imagenes de docker: docker images
+Crear una red llamada dev: 
+docker network ls
+docker network create dev
+Ejecutar un contenedor docker con la imagen de postgresql y la red creada:
+docker run --name postgres --network dev -p 5432:5432 -e POSTGRES_PASSWORD=123 -d postgres:10.21
+Ejecutar la imagen de pgadmin4:
+docker run --network dev -p 80:80 -e 'PGADMIN_DEFAULT_EMAIL=admin@depot.com' -e 'PGADMIN_DEFAULT_PASSWORD=123' -d dpage/pgadmin4
+En Firefox: localhost:80 e ingresa al portal con el usuario y contraseña configurada.
 
+Add new Server: 
+Nombre de la BD: localhost
+Host: postgresql (ponerle el nombre del contenedor)
+Port: 5432
+Maintenance database: postgres
+Username: postgres
+Password: 123
+
+En la terminal:
+docker ps
+docker rm -f [ID o nombres del contenedor] borra los contenedores.
+Levantar el docker compose para crear los contenedores: docker compose up -d
+Eliminar los contenedores: docker compose down
+
+En VSCode:
+En el archivo .ruby-version escribir: ruby-2.6.6@depot
+
+En la terminal:
+rails generate scaffold Product title:string description:text image_url:string price:decimal
+rails db:setup
+rails db:create
+rails s
+rails db:status
+
+rails server (iniciar el servidor)
+Entrar el servidor: http://127.0.0.1:3000
+Detener el servidor: Ctrl+C
+
+Ejecutar en la terminal: rails db:migrate
