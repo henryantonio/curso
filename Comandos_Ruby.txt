@@ -1,0 +1,43 @@
+cdcomandos
+rvm list
+rvm use 2.7.2
+rvm gemset list
+rvm gemset use demohh
+comando pwd: indica en qué carpeta estás.
+crear aplicacion: rails new rails_demohh
+cd rails_demohh
+sudo apt install tree
+tree -L 2 -I node_modules
+cat .ruby -version
+volver a especificar el gemset:
+rvm gemset list
+rvm gemset use demohh
+rails dbconsole: entrando a sqlite
+control + D para salir de sqlite
+Inicializa el Servidor: rails server
+control + C para detener el servidor
+rails server --help
+rails server -b 0.0.0.0 para acceder externamente.
+pwd
+Abrir Visual Studio Code: code .
+En VS-Code escribir en el archivo .ruby-version:
+ruby-2.7.2@demohh
+En la terminal: rails generate controller Say hello goodbye
+Cuando dice "Editar el template" se refiere a editar la vista, carpeta "views"
+Para generar una clave ssh para hacer login en github.
+Obtener desde consola la clave ssh:
+cat /home/usuario/.ssh/id_rsa.pub
+
+Borrar directorio .git de la carpeta rails_demohh:
+rm -r .git
+Conectarlo con el github.
+En la consola: irb y escribir "Hola mundo."
+Cerrar la consola interactiva: Ctrl+D
+
+Crear carpeta ruby dentro de la carpeta curso
+En la consola Terminator, entrar a la carpeta ruby y escribir: code . (esto abre el IDE Visual Studio Code).
+
+Para hacer comentarios de una línea sobre código: Ctrl+Shift+/
+
+
+
