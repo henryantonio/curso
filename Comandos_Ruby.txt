@@ -40,4 +40,3 @@ En la consola Terminator, entrar a la carpeta ruby y escribir: code . (esto abre
 Para hacer comentarios de una línea sobre código: Ctrl+Shift+/
 
 Probando subir un archivo txt desde git.
-
