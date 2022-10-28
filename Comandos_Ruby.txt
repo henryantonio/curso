@@ -40,3 +40,14 @@ En la consola Terminator, entrar a la carpeta ruby y escribir: code . (esto abre
 Para hacer comentarios de una línea sobre código: Ctrl+Shift+/
 
 Probando subir un archivo txt desde git.
+
+Clase Viernes.
+Dentro de Usuario/curso crear un gemset llamado depot: rvm gemset create depot
+Usar este gemset: rvm gemset use depot
+Instalar rails: gem install rails -v 6.1.7
+Ver lista de gemas: gem list
+Verificar versión de Rails: rails -v
+Para cambiar el motor de BD de sqlite3 (predeterminado) a PostgreSQL.
+Para ver las opciones para cambiar la configuración: rails new --help
+Crear nuevo proyecto llamado depot con PostgreSQL: rails new depot --database=postgresql
+
