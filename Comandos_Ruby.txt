@@ -90,3 +90,20 @@ Entrar el servidor: http://127.0.0.1:3000
 Detener el servidor: Ctrl+C
 
 Ejecutar en la terminal: rails db:migrate
+
+rails db:migrate:status
+rails db:rollback
+
+Hacer cambios en VSCode en el archivo /db/migrate/xxx_create_product.rb
+En la consola, ejecutar la migración: rails db:migrate
+
+Crear restriccion de unicidad:
+rails generate migration AddUniquenessToProductTitle
+Editar el archivo en db/migrate/xxx_add_uniqueness_to_product_title
+
+En Consola: rails db:migrate
+
+Intalar bootstrap, en la terminal: sudo npm install -g sass
+En la consola entramos a la carpeta sass
+
+sass sass/styles.scss stylesheets/styles.css
