@@ -118,3 +118,16 @@ En el mismo archivo borrar las últimas 2 líneas e insertar:
 
 En la consola, ejecutar el servidor: rails server o rails s
 
+rails db:drop
+rails db:setup
+yarn install #Instalar dependencias que no se suben al git.
+
+Suits para Test: rspec.info
+Buscamos la pagina de github de rspec-rails
+
+https://github.com/rspec/rspec-rails #bajar en la descripcion
+Copiar: gem 'rspec-rails', '~> 6.0.0' y pegarlo en el archivo GemFile debajo de development y test.
+Luego en la consola ejecutar: bundle install
+Ejecutar: rails generate rspec:install
+Ejecutar: rspec spec #Para confirmar que se instaló bien, corre los ejemplos que tenemos programados.
+
