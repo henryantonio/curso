@@ -107,3 +107,14 @@ Intalar bootstrap, en la terminal: sudo npm install -g sass
 En la consola entramos a la carpeta sass
 
 sass sass/styles.scss stylesheets/styles.css
+
+Se instala bootstrap en nuestra aplicación a través de gemas.
+Insertar en GemFile: gem 'bootstrap', '~> 5.2.2'
+En la consola escribir: bundle install
+En el proyecto editar el archivo /stylesheets/application.css cambiar la extensión a .scss
+En el mismo archivo borrar las últimas 2 líneas e insertar: 
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+En la consola, ejecutar el servidor: rails server o rails s
+
