@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>L Ine Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Cart</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @l_ine_items.each do |l_ine_item| %>
+      <tr>
+        <td><%= l_ine_item.product_id %></td>
+        <td><%= l_ine_item.cart_id %></td>
+        <td><%= link_to 'Show', l_ine_item %></td>
+        <td><%= link_to 'Edit', edit_l_ine_item_path(l_ine_item) %></td>
+        <td><%= link_to 'Destroy', l_ine_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New L Ine Item', new_l_ine_item_path %>

@@ -131,3 +131,31 @@ Luego en la consola ejecutar: bundle install
 Ejecutar: rails generate rspec:install
 Ejecutar: rspec spec #Para confirmar que se instaló bien, corre los ejemplos que tenemos programados.
 
+Clase Martes 01-11-2022.
+Instalar gema en el archivo GemFile, dentor del grupo development, test:
+gem 'factory_bot_rails'
+En Consola escribir bundle install
+
+https://github.com/thoughtbot/factory_bot_rails #Buscar subtítulo Configuration
+https://github.com/thoughtbot/factory_bot/blob/master/GETTING_STARTED.md#configure-your-test-suite
+Modificar el archivo rails_helper.rb Quitar el # en Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
+En consola: rspec
+
+Generar nuevo controlador para creare la página de inicio
+En Consola: rails generate controller Store index
+Editar el archivo: routes.rb
+
+En el git del curso, entrar a la rama 7, copiar el archivo depot/app/views/store/index.html.erb
+
+Para precargar el archivo seeds.rb
+Luego en consola ejecutar: rails db:seed
+
+Buscar más información de los métodos disponibles en: guides.rubyonrails.org --> Rails 6.0 Link Query Interface
+
+Crear el carrito.
+rails generate scaffold Cart
+rails db:migrate:status
+rails db:migrate
+
+Otro scaffold para obtener el detalle de los productos del carrito
+rails generate scaffold LineItem product:references cart:belongs_to
