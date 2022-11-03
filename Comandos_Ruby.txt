@@ -153,9 +153,64 @@ Luego en consola ejecutar: rails db:seed
 Buscar más información de los métodos disponibles en: guides.rubyonrails.org --> Rails 6.0 Link Query Interface
 
 Crear el carrito.
+Encender el docker de postgresql
 rails generate scaffold Cart
 rails db:migrate:status
 rails db:migrate
 
 Otro scaffold para obtener el detalle de los productos del carrito
 rails generate scaffold LineItem product:references cart:belongs_to
+
+rails destroy scaffold l_ine_item_spec.rb
+Borrar desde el proyecto el archivo /db/migrate/xxxxxx_l_ine_item_spec.rb
+
+Clase del Jueves 03-11-2022.
+Para agregar un nuevo campo a una tabla.
+rails generate migration add_quantity_to_line_items quantity:integer
+rails db:migrate:status
+rails db:migrate
+
+rails generate migration combine_items_in_cart
+
+En consola: rails console
+Escribir: Cart.destroy_all
+En consola: exit
+
+rails db:migrate:status
+rails db:rollback
+rails db:migrate:status
+rails db:migrate
+
+Detener el servidor: Ctrl+C
+Reset la BD: rails db:reset
+rails s
+
+Agregar autenticación con devise
+https://github.com/heartcombo/devise
+
+Agregar el campo name a usuario
+En Consola: rails generate scaffold User name:string
+rails db:migrate:status
+rails db:migrate
+
+Agregar en Gemfile: gem 'devise'
+En la terminal: 
+bundle install
+rails generate devise:install
+rails generate devise User
+rails db:migrate
+
+Para agregar auditoria.
+Agregar en Gemfile: gem "audited", "~> 5.0"
+bundle install
+rails generate audited:install
+rake db:migrate
+
+Agregar en product.rb
+audited
+
+Agregar en ApplicationController.rb
+before_action :authenticate_user!
+
+Agregar en StoreController.rb
+skip_before_action :authenticate_user!

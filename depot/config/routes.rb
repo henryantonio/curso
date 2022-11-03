@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :l_ine_items
+  devise_for :users
+  resources :users
+  resources :line_items
   resources :carts
   root 'store#index', as: 'store_index'
   resources :products
