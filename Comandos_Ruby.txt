@@ -232,4 +232,10 @@ Para iniciar contenedor de postgres desde la terminar:
 Ubicarse en la carpeta raiz del proyecto y escribir en consola:
 docker compose up -d
 
+Para verificar datos en sqlite.
+En consola escribir: rails dbconsole
+Luego se puede escribir: select * from tabla;
+Siempre escribir el ;
+Para salir: Ctrl+D
+
 
