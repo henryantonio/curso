@@ -86,6 +86,9 @@ En el archivo .ruby-version escribir: ruby-2.6.6@depot
 
 En la terminal:
 rails generate scaffold Product title:string description:text image_url:string price:decimal
+
+rails generate scaffold Book title:string category:string year:integer
+
 rails db:setup
 rails db:create
 rails s
