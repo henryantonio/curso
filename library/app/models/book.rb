@@ -1,7 +1,7 @@
 class Book < ApplicationRecord
 
-    #audited
+    audited
 
-    #validates :title, presence: true
+    validates :title, presence: true
 
 end
