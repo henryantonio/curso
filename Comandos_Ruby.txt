@@ -4,10 +4,15 @@ rvm use 2.7.2
 rvm gemset list
 rvm gemset use demohh
 comando pwd: indica en qué carpeta estás.
-crear aplicacion: rails new rails_demohh
+
+crear aplicacion: 
+rails new rails_demohh
+Borrar la carpeta .git dentro de la carpeta del proyecto
+
+
 cd rails_demohh
 sudo apt install tree
-tree -L 2 -I node_modules
+Mostrar el listado en forma de árbol: tree -L 2 -I node_modules
 cat .ruby -version
 volver a especificar el gemset:
 rvm gemset list
@@ -22,6 +27,7 @@ pwd
 Abrir Visual Studio Code: code .
 En VS-Code escribir en el archivo .ruby-version:
 ruby-2.7.2@demohh
+
 En la terminal: rails generate controller Say hello goodbye
 Cuando dice "Editar el template" se refiere a editar la vista, carpeta "views"
 Para generar una clave ssh para hacer login en github.
@@ -214,3 +220,9 @@ before_action :authenticate_user!
 
 Agregar en StoreController.rb
 skip_before_action :authenticate_user!
+
+Para iniciar contenedor de postgres desde la terminar:
+Ubicarse en la carpeta raiz del proyecto y escribir en consola:
+docker compose up -d
+
+
