@@ -92,7 +92,9 @@ rails generate scaffold Book title:string category:string year:integer
 rails db:setup
 rails db:create
 rails s
-rails db:status
+rails db:migrate:status
+rails db:migrate
+rails db:migrate:status
 
 rails server (iniciar el servidor)
 Entrar el servidor: http://127.0.0.1:3000
@@ -118,6 +120,7 @@ En la consola entramos a la carpeta sass
 sass sass/styles.scss stylesheets/styles.css
 
 Se instala bootstrap en nuestra aplicación a través de gemas.
+
 Insertar en GemFile: gem 'bootstrap', '~> 5.2.2'
 En la consola escribir: bundle install
 En el proyecto editar el archivo /stylesheets/application.css cambiar la extensión a .scss
@@ -198,7 +201,8 @@ Agregar autenticación con devise
 https://github.com/heartcombo/devise
 
 Agregar el campo name a usuario
-En Consola: rails generate scaffold User name:string
+En Consola: 
+rails generate scaffold User name:string
 rails db:migrate:status
 rails db:migrate
 
